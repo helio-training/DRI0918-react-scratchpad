@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react'
 import Die from './Die'
-import LogExample from './LogExample'
+import './dice.css'
+// import LogExample from './LogExample'
 
 class Dice extends React.Component {
     state = {
@@ -20,7 +21,7 @@ class Dice extends React.Component {
         }
         const sides = this.state.numSides
         return (
-            <Fragment>
+            <div className='card'>
                 <Die 
                     numSidesProp={sides[0]} 
                     myFunc={this.alertMySides}
@@ -44,7 +45,7 @@ class Dice extends React.Component {
 
                 {/* <LogExample myFunc={logMySides}/>
                 <LogExample myFunc={logMySides}/> */}
-            </Fragment>
+            </div>
         )
     }
 }

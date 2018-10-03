@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 // Changing State
 // Physical Button
@@ -11,10 +11,11 @@ class Die extends React.Component {
             current : 0, 
             numSides: this.props.numSidesProp
         }
+        this.clickHandler = this.clickHandler.bind(this)
     }
-    // clickHandler(){
-    //     this.setState({current: this.props.randomFunc(this.state.numSides)})
-    // }
+    clickHandler(){
+        this.setState({current: this.props.randomFunc(this.state.numSides)})
+    }
     render() {
         // const numSides = this.props.numSidesProp
         // this.props.myFunc(numSides)
@@ -28,13 +29,14 @@ class Die extends React.Component {
                 <input 
                     type='button' 
                     value='Roll'
-                    onClick={() => 
-                        this.setState({
-                                current: 
-                                    this.props.randomFunc(this.state.numSides)
-                                }
-                            )
-                        }
+                    onClick={this.clickHandler}
+                    // onClick={() => 
+                    //     this.setState({
+                    //             current: 
+                    //                 this.props.randomFunc(this.state.numSides)
+                    //             }
+                    //         )
+                    //     }
                 />
             </div>
         )

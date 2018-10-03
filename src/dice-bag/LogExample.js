@@ -5,9 +5,9 @@ class LogExample extends React.Component {
     render() {
         this.props.myFunc('This is from inside LogExample')
         return (
-            <div>
+            <Fragment>
                 Hello World
-            </div>
+            </Fragment>
         )
     }
 }
