@@ -4,11 +4,11 @@ import DiceBag from '../dice-bag/DiceBag'
 export default class extends Component {
     render() {
         return (
-            <Fragment>
+            <div>
                 <DiceBag/>
                 <DiceBag/>
                 <DiceBag/>
-            </Fragment>
+            </div>
             
         )
     }
