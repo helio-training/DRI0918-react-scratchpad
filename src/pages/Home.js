@@ -2,8 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import DiceBags from "./DiceBags";
 // import {About, AboutOG } from './About'
-import About, { AboutOG, x } from './About'
+import About, { AboutOG } from './About'
 import Topics from './Topics'
+import Todos from '../todos'
 
 const BasicExample = () => (
   <Router>
@@ -24,6 +25,9 @@ const BasicExample = () => (
         <li>
           <Link to="/dice">Dice Bags</Link>
         </li>
+        <li>
+          <Link to="/todos">Todo List</Link>
+        </li>
       </ul>
 
       <hr />
@@ -33,6 +37,7 @@ const BasicExample = () => (
       <Route path="/aboutog" component={AboutOG} />
       <Route path="/topics" component={Topics} />
       <Route path="/dice" component={DiceBags} />
+      <Route path="/todos" component={Todos} />
     </div>
   </Router>
 );

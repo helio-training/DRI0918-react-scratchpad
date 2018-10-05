@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import Die from './Die'
 import './dice.css'
 // import LogExample from './LogExample'
